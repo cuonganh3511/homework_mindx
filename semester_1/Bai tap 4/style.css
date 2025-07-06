@@ -1,0 +1,267 @@
+:root {
+	--color-main: #A4074D;
+	--color-text: #1A2434;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;;
+}
+
+ul {
+	list-style: none;
+}
+
+li a {
+	text-decoration: none;
+}
+
+/* header */
+body {
+	max-width: 1200px;
+	height: auto;
+	margin: 0 auto;
+}
+
+.header-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 20px;
+
+	.header-logo img {
+		width: 100%;
+		height: auto;
+	}
+
+	/* nav */
+	.header-nav {
+		.nav-ul {
+			display: flex;
+			gap: 30px;
+
+			.nav-li a {
+				color: black;
+			}
+		}
+	}
+
+	/* search */
+	.header-search {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 20px;
+
+		.search i {
+			opacity: 0.4;
+		}
+
+		.search input {
+			border: transparent;
+			padding: 10px 15px;
+		}
+	}
+}
+
+/* section-main */
+.main-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: start;
+	margin-top: 50px;
+
+	/* main-left */
+	.main-left {
+		max-width: 625px;
+		height: auto;
+
+		/* title */
+		.title {
+			margin-bottom: 20px;
+
+			.title-header {
+				font-size: 60px;
+				font-weight: 700;
+			}
+			.title-secont {
+				font-size: 20px;
+				font-weight: 400;
+				opacity: 0.7;
+				color: var(--color-text);
+			}
+	
+		}
+
+		/* student */
+		.student {
+			border-left: 5px solid var(--color-main);
+			padding-left: 40px;
+
+			/* text */
+			.total-student {
+				font-size: 20px;
+				opacity: 0.7;
+				color: var(--color-text);
+				font-weight: 700;
+			}
+
+			/* image-user */
+			.total-image {
+				display: flex;
+				margin-top: 10px;
+				position: relative;
+
+				.img-student {
+					width: 70px;
+					height: 70px;
+					border-radius: 50%;
+					border: 5px solid #fff;
+				}
+
+				.img-2 {
+					position: absolute;
+					top: 0;
+					left: 40px;
+					z-index: 2;
+				}
+
+				.img-3 {
+					position: absolute;
+					top: 0;
+					left: 80px;
+					z-index: 3;
+				}
+
+				.img-4 {
+					position: absolute;
+					top: 0;
+					left: 120px;
+					z-index: 4;
+				}
+
+				.img-900 {
+					background-color: var(--color-main);
+					display: inline-block;
+					font-size: 15px;
+					color: #fff;
+					font-weight: 700;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					position: absolute;
+					top: 0;
+					left: 160px;
+					z-index: 5;
+				}
+			}
+		
+		}
+
+		/* button */
+		.button-main-left {
+			margin-top: 20px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 16px;
+
+			span {
+				width: 304px;
+				height: 77px;
+				display: inline-block;
+				font-weight: 700;
+				border-radius: 16px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				cursor: pointer;
+			}
+
+			.start {
+				color: #fff;
+				background-color: var(--color-main);
+			}
+
+			.learn {
+				border: 1px solid var(--color-main);
+			}
+		}
+
+		/* logo-app */
+		.logo-app {
+			margin-top: 20px;
+			h2 {
+				font-size: 20px;
+				opacity: 0.7;
+				color: var(--color-text);
+				font-weight: 700;
+			}
+		}
+	}
+	/* end main-left */
+
+	/* main-right */
+	.main-right {
+		.image-main-right {
+			position: relative;
+
+			/* img-main */
+			.image-main {
+				width: 100%;
+				height: auto;
+
+			}
+
+			/* content-main */
+			.content-main {
+				width: 253px;
+				height: auto;
+				border-radius: 16px;
+				padding: 16px 32px;
+				background-color: #fff;
+				position: absolute;
+				top: 37px;
+				left: -127px;
+				box-shadow: 8px 8px 16px #0000000A;
+
+				/* text-content */
+				h2 {
+					font-size: 20px;
+					font-weight: 500;
+					color: var(--color-text);
+					margin-bottom: 15px;
+				}
+
+				/* person */
+				.person {
+					display: flex;
+					justify-content: start;
+					align-items: center;
+					gap: 10px;
+
+					img {
+						width: 42px;
+						height: 42px;
+					}
+
+					ul li h3 {
+						font-size: 16px;
+						font-weight: 500;
+						color: var(--color-text);
+					}
+
+					ul li span {
+						font-size: 14px;
+						color: #575455;
+					}
+				} 
+				/* end person */
+			}
+			/* end content-main */
+		}
+	}
+}
+
