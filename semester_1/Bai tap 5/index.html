@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- tailwind -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- font-awesome -->
+    <script
+      src="https://kit.fontawesome.com/d3822cd93a.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="w-[398px] m-auto xl:w-[1184px]">
+    <header class="pt-[32px] pb-[32px]">
+      <!-- nav -->
+      <nav class="flex justify-between items-center font-bold">
+        <!-- logo -->
+        <div class="flex items-center gap-[16px]">
+          <img class="text-[40px]" src="image/Vector.png" alt="" />
+          <h1 class="font-[900] text-2xl">Travlog</h1>
+        </div>
+
+        <div
+          class="bg-[#5D50C6] rounded-[10px] w-[40px] h-[40px] text-[30px] flex justify-center items-center md:hidden lg:hidden xl:hidden 2xl:hidden"
+        >
+          <i class="fa-solid fa-bars text-white"></i>
+        </div>
+
+        <!-- navbar -->
+        <div class="hidden">
+          <ul
+            class="sm:flex sm:justify-self-center sm:gap-[64px] sm:text-[#19182580]"
+          >
+            <li class="text-black"><a href="#">Home</a></li>
+            <li><a href="#">Discover</a></li>
+            <li><a href="#">Special Deals</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- login -->
+        <div class="hidden sm:flex sm:justify-end sm:gap-4">
+          <span class="px-[32px] py-[18px]">Log In</span>
+          <span
+            class="px-[32px] py-[18px] bg-[#5D50C6] rounded-[100px] text-white"
+            >Sign Up</span
+          >
+        </div>
+      </nav>
+    </header>
+    <!--end-header-->
+
+    <section class="flex flex-col gap-[32px]">
+      <!-- content-image -->
+      <div class="w-[400px] h-[400px] relative top-[32px]">
+        <!-- bg-image -->
+        <div class="absolute">
+          <img src="image/layer.png" alt="" />
+        </div>
+
+        <!-- img-content -->
+        <div>
+          <img
+            class="w-[140px] h-[154px] absolute top-[38px] left-[50px]"
+            src="image/Rectangle 1.png"
+            alt=""
+          />
+          <img
+            class="w-[140px] h-[154px] absolute top-[210px] left-[50px]"
+            src="image/Rectangle 2.png"
+            alt=""
+          />
+          <img
+            class="w-[140px] h-[154px] absolute top-[100px] left-[200px]"
+            src="image/Rectangle 3.png"
+            alt=""
+          />
+        </div>
+      </div>
+      <!--end-container-->
+
+      <!-- content-text -->
+      <div class="mt-[32px]">
+        <!-- text -->	
+        <div>
+			<div class="flex justify-center items-center gap-[16px] px-[32px] py-[16px]">
+				<h2 class="text-[#F85E9F] text-[14px] font-bold">Explore the world!</h2>
+				<img src="image/work 1.png" alt="">
+			</div>
+
+          <h3 class="text-[40px] font-bold inline-block text-center">Travel <span class="text-[#F85E9F]">top destination</span> of the world</h3>
+          <p class="text-[16px] text-[#19182580] opacity-50 inline-block text-center">
+            We always make our customer happy by providing as many choices as
+            possible
+          </p>
+        </div>
+
+        <!-- button -->
+        <div class="my-[32px] ">
+          <span class="w-[400px] h-[65px] bg-[#5D50C6] flex justify-center items-center text-white rounded-[100px] hover:bg-[#6036b5]">Get Started</span>
+        </div>
+
+        <!-- watch -->
+        <div class="flex justify-center items-center gap-1 border border-[#EEEEEE] py-[24px] px-[32px] rounded-[100px]">
+			<img src="image/play-circle.5 1.png" alt="">
+          	<span class="text-[14px] text-[#222831] font-bold">Watch Demo</span>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
