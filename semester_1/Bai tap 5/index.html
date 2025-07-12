@@ -12,26 +12,35 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body class="w-[398px] m-auto xl:w-[1184px]">
-    <header class="pt-[32px] pb-[32px]">
-      <!-- nav -->
-      <nav class="flex justify-between items-center font-bold">
-        <!-- logo -->
-        <div class="flex items-center gap-[16px]">
-          <img class="text-[40px]" src="image/Vector.png" alt="" />
-          <h1 class="font-[900] text-2xl">Travlog</h1>
-        </div>
 
-        <div
-          class="bg-[#5D50C6] rounded-[10px] w-[40px] h-[40px] text-[30px] flex justify-center items-center md:hidden lg:hidden xl:hidden 2xl:hidden"
-        >
-          <i class="fa-solid fa-bars text-white"></i>
+  <body class="">
+    <header class="pt-[32px] pb-[32px] w-[398px] m-auto md:w-[895px] lg:w-[1184px]">
+      <!-- nav -->
+      <nav class="w-full flex justify-between items-center font-bold">
+
+        <!-- logo vs icon -->
+        <div class="flex justify-between items-center w-full md:basis-2/4 md:flex-row-reverse lg:basis-1/6">
+
+            <!-- logo -->
+          <div class="flex items-center gap-[16px]">
+            <img class="text-[40px]" src="image/Vector.png" alt="" />
+            <h1 class="font-[900] text-2xl">Travlog</h1>
+          </div>
+
+          <!-- icon -->
+          <div
+            class="bg-[#5D50C6] rounded-[10px] w-[40px] h-[40px] text-[30px] flex justify-center items-center lg:hidden xl:hidden 2xl:hidden"
+          >
+            <i class="fa-solid fa-bars text-white"></i>
+          </div>
+
         </div>
+        <!-- end-logo vs icon -->
 
         <!-- navbar -->
-        <div class="hidden">
+        <div class="hidden lg:flex lg:basis-3/6 lg:justify-end">
           <ul
-            class="sm:flex sm:justify-self-center sm:gap-[64px] sm:text-[#19182580]"
+            class="flex justify-self-center text-[14px] gap-[64px] text-[#19182580]"
           >
             <li class="text-black"><a href="#">Home</a></li>
             <li><a href="#">Discover</a></li>
@@ -41,7 +50,7 @@
         </div>
 
         <!-- login -->
-        <div class="hidden sm:flex sm:justify-end sm:gap-4">
+        <div class="hidden md:basis-2/4 md:flex md:justify-end lg:basis-2/6">
           <span class="px-[32px] py-[18px]">Log In</span>
           <span
             class="px-[32px] py-[18px] bg-[#5D50C6] rounded-[100px] text-white"
@@ -52,28 +61,29 @@
     </header>
     <!--end-header-->
 
-    <section class="flex flex-col gap-[32px]">
+    <section class="flex flex-col gap-[32px] w-[398px] m-auto md:w-[985px] lg:w-[1184px]">
+
       <!-- content-image -->
-      <div class="w-[400px] h-[400px] relative top-[32px]">
+      <div class=" relative mt-[32px] w-full h-[398px] m-auto md:w-[772px] md:h-[713px] lg::w-[772px]">
         <!-- bg-image -->
-        <div class="absolute">
-          <img src="image/layer.png" alt="" />
+        <div class="absolute w-full">
+          <img class="" src="image/layer.png" alt="" />
         </div>
 
         <!-- img-content -->
         <div>
           <img
-            class="w-[140px] h-[154px] absolute top-[38px] left-[50px]"
+            class="w-[140px] h-[154px] absolute top-[38px] left-[50px] md:w-[272px] md:h-[300px] md:top-[75px] md:left-[91px]"
             src="image/Rectangle 1.png"
             alt=""
           />
           <img
-            class="w-[140px] h-[154px] absolute top-[210px] left-[50px]"
+            class="w-[140px] h-[154px] absolute top-[210px] left-[50px] md:w-[272px] md:h-[300px] md:top-[429px] md:left-[91px]"
             src="image/Rectangle 2.png"
             alt=""
           />
           <img
-            class="w-[140px] h-[154px] absolute top-[100px] left-[200px]"
+            class="w-[140px] h-[205px] absolute top-[100px] left-[200px] md:w-[272px] md:h-[400px] md:top-[191px] md:left-[394px]"
             src="image/Rectangle 3.png"
             alt=""
           />
@@ -82,32 +92,51 @@
       <!--end-container-->
 
       <!-- content-text -->
-      <div class="mt-[32px]">
-        <!-- text -->	
-        <div>
-			<div class="flex justify-center items-center gap-[16px] px-[32px] py-[16px]">
-				<h2 class="text-[#F85E9F] text-[14px] font-bold">Explore the world!</h2>
-				<img src="image/work 1.png" alt="">
-			</div>
+      <div class="mt-[32px] ">
+        <!-- text -->
+        <div class="flex flex-col gap-5">
+          <div
+            class="flex justify-center items-center w-[224px] h-[54px] border rounded-[100px] m-auto"
+          >
+            <h2 class="text-[#F85E9F] text-[14px] font-bold mr-[16px]">
+              Explore the world!
+            </h2>
+            <img src="image/work 1.png" alt="" />
+          </div>
 
-          <h3 class="text-[40px] font-bold inline-block text-center">Travel <span class="text-[#F85E9F]">top destination</span> of the world</h3>
-          <p class="text-[16px] text-[#19182580] opacity-50 inline-block text-center">
-            We always make our customer happy by providing as many choices as
-            possible
-          </p>
+          <h3 class="text-[40px] font-bold text-center md:text-[56px] md:px-50">
+            Travel <span class="text-[#F85E9F]">top destination</span> of the
+            world
+          </h3>
+          
+          <div class="text-[16px] text-[#19182580] opacity-50 inline-block text-center">
+            <span class="block">We always make our customer happy by providing</span>
+          <span>as many choices as possible</span>
+          </div>
         </div>
 
-        <!-- button -->
-        <div class="my-[32px] ">
-          <span class="w-[400px] h-[65px] bg-[#5D50C6] flex justify-center items-center text-white rounded-[100px] hover:bg-[#6036b5]">Get Started</span>
+        <div class="mt-10 md:flex md:justify-center md:items-start md:gap-5">
+
+            <!-- button -->
+          <div>
+            <span
+              class="w-[398px] h-[65px] bg-[#5D50C6] flex justify-center items-center text-white rounded-[100px] hover:bg-[#6036b5] md:w-[141px] md:h-[49px] "
+              >Get Started</span
+            >
+          </div>
+
+          <!-- watch -->
+          <div
+            class="flex justify-center items-center gap-1 border border-[#EEEEEE] w-[398px] h-[72px] rounded-[100px] mt-5 md:w-[181px] md:h-[56px] md:mt-0"
+          >
+            <img src="image/play-circle.5 1.png" alt="" />
+            <span class="text-[14px] text-[#222831] font-bold">Watch Demo</span>
+          </div>
+
         </div>
 
-        <!-- watch -->
-        <div class="flex justify-center items-center gap-1 border border-[#EEEEEE] py-[24px] px-[32px] rounded-[100px]">
-			<img src="image/play-circle.5 1.png" alt="">
-          	<span class="text-[14px] text-[#222831] font-bold">Watch Demo</span>
-        </div>
       </div>
+
     </section>
   </body>
 </html>
