@@ -61,10 +61,11 @@
     </header>
     <!--end-header-->
 
-    <section class="flex flex-col gap-[32px] w-[398px] m-auto md:w-[985px] lg:w-[1184px]">
+    <section class="flex flex-col gap-[32px] w-[398px] m-auto md:w-[985px] lg:w-[1184px] lg:flex-row lg:flex-row-reverse lg:gap-0">
 
-      <!-- content-image -->
-      <div class=" relative mt-[32px] w-full h-[398px] m-auto md:w-[772px] md:h-[713px] lg::w-[772px]">
+      <!-- container-image -->
+      <div class=" relative mt-[32px] w-full h-[398px] m-auto md:w-[772px] md:h-[750px] lg:w-[772px]">
+
         <!-- bg-image -->
         <div class="absolute w-full">
           <img class="" src="image/layer.png" alt="" />
@@ -89,32 +90,37 @@
           />
         </div>
       </div>
-      <!--end-container-->
+      <!--end-container-image-->
 
-      <!-- content-text -->
-      <div class="mt-[32px] ">
+      <!-- container-text -->
+      <div class="mt-[32px] lg:w-[412px] lg:flex lg:flex-col lg:justify-center lg:items-start">
         <!-- text -->
         <div class="flex flex-col gap-5">
-          <div
-            class="flex justify-center items-center w-[224px] h-[54px] border rounded-[100px] m-auto"
-          >
+          <div class="flex justify-center items-center w-[224px] h-[54px] border rounded-[100px] m-auto lg:m-0">
             <h2 class="text-[#F85E9F] text-[14px] font-bold mr-[16px]">
               Explore the world!
             </h2>
             <img src="image/work 1.png" alt="" />
           </div>
 
-          <h3 class="text-[40px] font-bold text-center md:text-[56px] md:px-50">
+          <h3 class="text-[40px] font-bold text-center md:text-[56px] md:px-50 lg:text-[69px] lg:p-0 lg:text-start">
             Travel <span class="text-[#F85E9F]">top destination</span> of the
             world
           </h3>
           
-          <div class="text-[16px] text-[#19182580] opacity-50 inline-block text-center">
-            <span class="block">We always make our customer happy by providing</span>
+          <div class="text-[16px] text-[#19182580] opacity-50 inline-block text-center lg:text-start">
+
+            <span class="block">We always make our customer happy by
+               <span class="lg:block">providing</span>
+            </span>
+
           <span>as many choices as possible</span>
           </div>
-        </div>
 
+        </div>
+        <!-- end-text -->
+
+        <!-- border-button -->
         <div class="mt-10 md:flex md:justify-center md:items-start md:gap-5">
 
             <!-- button -->
@@ -136,7 +142,25 @@
         </div>
 
       </div>
+      <!-- end-container-text -->
 
+    </section>
+
+    <!-- logo branch -->
+    <section class="mt-10 w-[398px] md:w-[895px] lg:w-[1184px] m-auto">
+      <div class="w-full flex flex-col ">
+        
+        <div class=" flex scale-50 gap-1">
+          <img src="image/Group 1.png" alt="">
+          <img src="image/Group 2.png" alt="">
+          <img src="image/Group3.png" alt="">
+        </div>
+
+        <div class="">
+          <img src="image/Group 4.png" alt="">
+          <img src="image/Group 5.png" alt="">
+        </div>
+      </div>
     </section>
   </body>
 </html>
