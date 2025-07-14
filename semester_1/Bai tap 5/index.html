@@ -13,154 +13,167 @@
     ></script>
   </head>
 
-  <body class="">
-    <header class="pt-[32px] pb-[32px] w-[398px] m-auto md:w-[895px] lg:w-[1184px]">
-      <!-- nav -->
-      <nav class="w-full flex justify-between items-center font-bold">
+  <body>
+    <div class="wraper px-4 md:px-16 lg:px-32">
 
-        <!-- logo vs icon -->
-        <div class="flex justify-between items-center w-full md:basis-2/4 md:flex-row-reverse lg:basis-1/6">
+      <!-- container navbar -->
+      <div class="container">
 
-            <!-- logo -->
-          <div class="flex items-center gap-[16px]">
-            <img class="text-[40px]" src="image/Vector.png" alt="" />
-            <h1 class="font-[900] text-2xl">Travlog</h1>
-          </div>
+        <header class="py-8 m-auto">
+          <!-- nav -->
+          <nav class="w-full flex justify-between items-center font-bold">
 
-          <!-- icon -->
-          <div
-            class="bg-[#5D50C6] rounded-[10px] w-[40px] h-[40px] text-[30px] flex justify-center items-center lg:hidden xl:hidden 2xl:hidden"
-          >
-            <i class="fa-solid fa-bars text-white"></i>
-          </div>
+            <!-- logo vs icon -->
+            <div class="flex justify-between items-center w-full md:basis-2/4 md:flex-row-reverse lg:basis-1/6">
 
-        </div>
-        <!-- end-logo vs icon -->
+                <!-- logo -->
+              <div class="flex items-center gap-[16px]">
+                <img class="text-[40px]" src="image/Vector.png" alt="" />
+                <h1 class="font-[900] text-2xl">Travlog</h1>
+              </div>
 
-        <!-- navbar -->
-        <div class="hidden lg:flex lg:basis-3/6 lg:justify-end">
-          <ul
-            class="flex justify-self-center text-[14px] gap-[64px] text-[#19182580]"
-          >
-            <li class="text-black"><a href="#">Home</a></li>
-            <li><a href="#">Discover</a></li>
-            <li><a href="#">Special Deals</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </div>
+              <!-- icon -->
+              <div
+                class="bg-[#5D50C6] rounded-[10px] w-[40px] h-[40px] text-[30px] flex justify-center items-center lg:hidden xl:hidden 2xl:hidden"
+              >
+                <i class="fa-solid fa-bars text-white"></i>
+              </div>
 
-        <!-- login -->
-        <div class="hidden md:basis-2/4 md:flex md:justify-end lg:basis-2/6">
-          <span class="px-[32px] py-[18px]">Log In</span>
-          <span
-            class="px-[32px] py-[18px] bg-[#5D50C6] rounded-[100px] text-white"
-            >Sign Up</span
-          >
-        </div>
-      </nav>
-    </header>
-    <!--end-header-->
+            </div>
+            <!-- end-logo vs icon -->
 
-    <section class="flex flex-col gap-[32px] w-[398px] m-auto md:w-[985px] lg:w-[1184px] lg:flex-row lg:flex-row-reverse lg:gap-0">
+            <!-- navbar -->
+            <div class="hidden lg:flex lg:basis-3/6 lg:justify-end">
+              <ul
+                class="flex justify-self-center text-[14px] gap-[64px] text-[#19182580]"
+              >
+                <li class="text-black"><a href="#">Home</a></li>
+                <li><a href="#">Discover</a></li>
+                <li><a href="#">Special Deals</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
 
-      <!-- container-image -->
-      <div class=" relative mt-[32px] w-full h-[398px] m-auto md:w-[772px] md:h-[750px] lg:w-[772px]">
+            <!-- login -->
+            <div class="hidden md:basis-2/4 md:flex md:justify-end lg:basis-2/6">
+              <span class="px-[32px] py-[18px] cursor-pointer rounded-[100px] hover:bg-gray-100">Log In</span>
+              <span
+                class="px-[32px] py-[18px] bg-[#5D50C6] rounded-[100px] text-white cursor-pointer hover:bg-[#6036b5]"
+                >Sign Up</span
+              >
+            </div>
+          </nav>
+        </header>
+        <!--end-header-->
 
-        <!-- bg-image -->
-        <div class="absolute w-full">
-          <img class="" src="image/layer.png" alt="" />
-        </div>
-
-        <!-- img-content -->
-        <div>
-          <img
-            class="w-[140px] h-[154px] absolute top-[38px] left-[50px] md:w-[272px] md:h-[300px] md:top-[75px] md:left-[91px]"
-            src="image/Rectangle 1.png"
-            alt=""
-          />
-          <img
-            class="w-[140px] h-[154px] absolute top-[210px] left-[50px] md:w-[272px] md:h-[300px] md:top-[429px] md:left-[91px]"
-            src="image/Rectangle 2.png"
-            alt=""
-          />
-          <img
-            class="w-[140px] h-[205px] absolute top-[100px] left-[200px] md:w-[272px] md:h-[400px] md:top-[191px] md:left-[394px]"
-            src="image/Rectangle 3.png"
-            alt=""
-          />
-        </div>
       </div>
-      <!--end-container-image-->
 
-      <!-- container-text -->
-      <div class="mt-[32px] lg:w-[412px] lg:flex lg:flex-col lg:justify-center lg:items-start">
-        <!-- text -->
-        <div class="flex flex-col gap-5">
-          <div class="flex justify-center items-center w-[224px] h-[54px] border rounded-[100px] m-auto lg:m-0">
-            <h2 class="text-[#F85E9F] text-[14px] font-bold mr-[16px]">
-              Explore the world!
-            </h2>
-            <img src="image/work 1.png" alt="" />
-          </div>
+      <!-- main -->
+      <section class="flex flex-col gap-[32px] m-aut lg:flex-row lg:flex-row-reverse lg:gap-0">
 
-          <h3 class="text-[40px] font-bold text-center md:text-[56px] md:px-50 lg:text-[69px] lg:p-0 lg:text-start">
-            Travel <span class="text-[#F85E9F]">top destination</span> of the
-            world
-          </h3>
-          
-          <div class="text-[16px] text-[#19182580] opacity-50 inline-block text-center lg:text-start">
+        <!-- container-image -->
+        <div class=" relative mt-[32px] w-full h-[398px] m-auto md:h-[750px] lg:basis-5/8">
 
-            <span class="block">We always make our customer happy by
-               <span class="lg:block">providing</span>
-            </span>
-
-          <span>as many choices as possible</span>
-          </div>
-
-        </div>
-        <!-- end-text -->
-
-        <!-- border-button -->
-        <div class="mt-10 md:flex md:justify-center md:items-start md:gap-5">
-
-            <!-- button -->
+          <!-- img-content -->
           <div>
-            <span
-              class="w-[398px] h-[65px] bg-[#5D50C6] flex justify-center items-center text-white rounded-[100px] hover:bg-[#6036b5] md:w-[141px] md:h-[49px] "
-              >Get Started</span
+            <!-- bg-image -->
+            <div class="">
+              <img class="w-full" src="image/layer.png" alt="" />
+            </div>
+
+            <div class="w-[140px] h-[154px] absolute top-[38px] left-[50px] md:w-[272px] md:h-[300px] md:top-[75px] md:left-[152px] lg:left-[91px]">
+              <img
+                
+                src="image/Rectangle 1.png"
+                alt=""
+              />
+            </div>
+
+            <div class="w-[140px] h-[154px] absolute top-[210px] left-[50px] md:w-[272px] md:h-[300px] md:top-[420px] md:left-[152px] lg:left-[91px]">
+              <img
+                src="image/Rectangle 2.png"
+                alt=""
+              />
+            </div>
+
+            <div class="w-[140px] h-[205px] absolute top-[100px] left-[200px] md:w-[272px] md:h-[400px] md:top-[191px] md:left-[455px] lg:left-[410px]">
+              <img
+                src="image/Rectangle 3.png"
+                alt=""
+              />
+            </div>
+
+          </div>
+        </div>
+        <!--end-container-image-->
+
+        <!-- container-text -->
+        <div class="mt-[32px] lg:flex lg:flex-col lg:justify-center lg:items-start lg:basis-3/8">
+          <!-- text -->
+          <div class="flex flex-col gap-5">
+            <div class="flex justify-center items-center w-[224px] h-[54px] border rounded-[100px] m-auto lg:m-0">
+              <h2 class="text-[#F85E9F] text-[14px] font-bold mr-[16px]">
+                Explore the world!
+              </h2>
+              <img src="image/work 1.png" alt="" />
+            </div>
+
+            <h3 class="text-[40px] font-bold text-center md:text-[56px] md:px-38 lg:text-[69px] lg:p-0 lg:text-start">
+              Travel <span class="text-[#F85E9F]">top destination</span> of the
+              world
+            </h3>
+            
+            <div class="text-[16px] text-[#19182580] opacity-50 inline-block text-center lg:text-start">
+
+              <span class="block">We always make our customer happy by
+                <span class="lg:block">providing</span>
+              </span>
+
+            <span>as many choices as possible</span>
+            </div>
+
+          </div>
+          <!-- end-text -->
+
+          <!-- border-button -->
+          <div class="mt-10 md:flex md:justify-center md:items-start md:gap-5">
+
+              <!-- button -->
+            <div>
+              <span
+                class="shadow-2xl h-[65px] bg-[#5D50C6] flex justify-center items-center text-white rounded-[100px] hover:bg-[#6036b5] md:w-[141px] md:h-[49px] "
+                >Get Started</span
+              >
+            </div>
+
+            <!-- watch -->
+            <div
+              class="flex justify-center items-center gap-1 border border-[#EEEEEE] h-[72px] rounded-[100px] mt-5 md:w-[181px] md:h-[56px] md:mt-0"
             >
-          </div>
+              <img src="image/play-circle.5 1.png" alt="" />
+              <span class="text-[14px] text-[#222831] font-bold ">Watch Demo</span>
+            </div>
 
-          <!-- watch -->
-          <div
-            class="flex justify-center items-center gap-1 border border-[#EEEEEE] w-[398px] h-[72px] rounded-[100px] mt-5 md:w-[181px] md:h-[56px] md:mt-0"
-          >
-            <img src="image/play-circle.5 1.png" alt="" />
-            <span class="text-[14px] text-[#222831] font-bold">Watch Demo</span>
           </div>
 
         </div>
+        <!-- end-container-text -->
 
-      </div>
-      <!-- end-container-text -->
+      </section>
 
-    </section>
-
-    <!-- logo branch -->
-    <section class="mt-10 w-[398px] md:w-[895px] lg:w-[1184px] m-auto">
-      <div class="w-full flex flex-col ">
+      <!-- logo branch -->
+      <section class="mt-10 m-auto">
+      <div class="w-full flex flex-wrap gap-x-10 gap-y-5 justify-center md:px-[140px] lg:px-0 lg:justify-between">
         
-        <div class=" flex scale-50 gap-1">
-          <img src="image/Group 1.png" alt="">
-          <img src="image/Group 2.png" alt="">
-          <img src="image/Group3.png" alt="">
-        </div>
-
-        <div class="">
-          <img src="image/Group 4.png" alt="">
-          <img src="image/Group 5.png" alt="">
-        </div>
+        <img class="h-4 md:h-8" src="image/Group 1.png" alt="">
+        <img class="h-4 md:h-8" src="image/Group 2.png" alt="">
+        <img class="h-4 md:h-8" src="image/Group3.png" alt="">
+        <img class="h-4 md:h-8" src="image/Group 4.png" alt="">
+        <img class="h-4 md:h-8" src="image/Group 5.png" alt="">
+        
       </div>
-    </section>
+      </section>
+
+    </div>
   </body>
 </html>
