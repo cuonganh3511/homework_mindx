@@ -29,7 +29,7 @@ console.log("bai 3");
 let res_3 = 1;
 const input_3 = 5;
 
-if (Number.isInteger(input_3)) {
+if (Number.isInteger(input_3)) {     // check co phai la so nguyen khong
 	for (let i = 1; i <= input_3; i++) {
 		res_3 *= i;
 	}
@@ -71,3 +71,21 @@ console.log(binary);
 // 
 
 console.log("-------------------------------------------------");
+
+// bai tap 6
+console.log("bai 6");
+
+const input = 5;
+let s = 0;
+
+if (Number.isInteger(input )) {
+	for( let i = 1; i <= input; i++) {
+		s = Math.sqrt(s + Math.sqrt(input - i));
+		// s = can 5-1 = 2
+		// s = can 2 + can (5-2) = 3 
+		console.log(s);
+	}
+	const tong = Math.sqrt(input + s + Math.sqrt(3))
+	console.log(tong);
+}
+
