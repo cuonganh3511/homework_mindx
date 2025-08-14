@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/fontEnd.css" />
+    <script
+      src="https://kit.fontawesome.com/d3822cd93a.js"
+      crossorigin="anonymous"
+    ></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <div class="header">
+          <div class="start">
+            <button id="btnStartStop">Start</button>
+          </div>
+        </div>
+        <div class="contain">
+          <div class="contain-left">
+            <div
+              id="board-game"
+              class="mx-auto grid grid-cols-4 gap-3 w-[calc(128px*4+8px*5)]"
+            ></div>
+          </div>
+
+          <div class="contain-right">
+            <div class="clock">
+              <h3>Đồng Hồ</h3>
+              <div class="timer" id="timer">
+                <span id="minutes">00</span>
+                <span>:</span>
+                <span id="seconds">00</span>
+              </div>
+            </div>
+
+            <div class="instruct">
+              <span class="title-instruct">Hướng Dẫn Di Chuyển</span>
+              <div class="list-icon">
+                <div>
+                  <span class="item"><i class="fa-solid fa-arrow-up"></i></span>
+                </div>
+                <div>
+                  <span class="item"
+                    ><i class="fa-solid fa-arrow-left"></i
+                  ></span>
+                  <span class="item"
+                    ><i class="fa-solid fa-arrow-down"></i
+                  ></span>
+                  <span class="item"
+                    ><i class="fa-solid fa-arrow-right"></i
+                  ></span>
+                </div>
+              </div>
+              <div class="list-icon">
+                <div>
+                  <span class="item">W</span>
+                </div>
+                <div>
+                  <span class="item">A</span>
+                  <span class="item">S</span>
+                  <span class="item">D</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer">
+          <div class="title">
+            <h3>Lịch sử lượt chơi</h3>
+          </div>
+          <div class="history" id="historyPlay">
+            <ul>
+              <li class="number">
+                <span>#</span>
+              </li>
+              <li class="play">
+                <span>Bước đi</span>
+              </li>
+              <li class="time">
+                <span>Thời gian</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+	<script src="/main.js"></script>
+  <script src="/clock.js"></script>
+
+  </body>
+</html>
