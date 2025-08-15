@@ -2,6 +2,7 @@ let timerInterval = null;
 let seconds = 0;
 let minutes = 0;
 let count = 0;
+let isPlaying = false;
 
 
 // lấy id El
@@ -96,6 +97,8 @@ function canMove(fromIndex, toIndex) {
 }
 
 function moveTile(direction) {
+  if (!isPlaying) return;
+
   const emptyPos = getRowCol(emptyIndex);
   let newRow = emptyPos.row;
   let newCol = emptyPos.col;
@@ -128,6 +131,8 @@ function moveTile(direction) {
 }
 
 function moveTileByClick(clickedIndex) {
+  if (!isPlaying) return;
+
   if (canMove(clickedIndex, emptyIndex)) {
     board[emptyIndex] = board[clickedIndex];
     board[clickedIndex] = null;
@@ -185,7 +190,7 @@ function startTimer() {
   }, 1000);
 }
 
-function checkWin() { 
+function checkWin() {
   const isWon = board.every(
     (tile, index) => tile === winningState[index]
   );
@@ -193,15 +198,14 @@ function checkWin() {
   if (isWon) {
     setTimeout(() => {
       alert("you win");
-
       stopTimer();
-    
-    },300)
+
+    }, 300)
   }
 }
 
 function shuffleBoard() {
-  for (let i = 0; i < 1000; i++) {
+  for (let i = 0; i < 100; i++) {
     const directions = ["up", "down", "left", "right"];
     const randomDirection =
       directions[Math.floor(Math.random() * directions.length)];
@@ -234,8 +238,8 @@ function shuffleBoard() {
   }
 
   // Fake luôn thắng
-  board.splice(0, board.length, ...winningState);
-  emptyIndex = board.indexOf(null);
+  // board.splice(0, board.length, ...winningState);
+  // emptyIndex = board.indexOf(null);
 
   renderBoard();
   checkWin();
@@ -244,51 +248,58 @@ shuffleBoard();
 
 
 function stopTimer() {
-        if (checkWin) {
-          count++;
-          btnStartStop.textContent = "Start";
-          clearInterval(timerInterval);
-          timerInterval = null;
+  if (checkWin) {
+    // false -> kh di chuyển
+    isPlaying = false;
+    count++;
+    // btn -> start
+    btnStartStop.textContent = "Start";
+    clearInterval(timerInterval);
+    timerInterval = null;
 
 
-          //Lấy dữ liệu cũ từ localStorage
-          let history = JSON.parse(localStorage.getItem("history")) || [];
+    //Lấy dữ liệu cũ từ localStorage
+    let history = JSON.parse(localStorage.getItem("history")) || [];
 
-          // Thêm bản ghi mới vào danh sách
-          history.push({
-            count,
-            minutes,
-            seconds,
-            timeText: `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`,
-            date: new Date().toLocaleString()
-          });
+    // Thêm lượt chơi mới vào danh sách
+    history.push({
+      count,
+      minutes,
+      seconds,
+      timeText: `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`,
+      date: new Date().toLocaleString()
+    });
 
 
-          //Lưu lại toàn bộ danh sách vào localStorage
-          localStorage.setItem("history", JSON.stringify(history));
-        } else {
-          history.push("")
-        }
-      }
+    //Lưu lại toàn bộ danh sách vào localStorage
+    localStorage.setItem("history", JSON.stringify(history));
+    renderHistory();
+  }
+}
 
 btnStartStop.addEventListener("click", () => {
   if (timerInterval) {
-    // Đang chạy → dừng
+    // Đang chạy -> dừng
     stopTimer();
+    // false -> kh di chuyển đcđc
+    isPlaying = false;
     btnStartStop.textContent = "Start";
+    // đảo vị trí
+    shuffleBoard();
   } else {
-    // Đang dừng → chạy lại từ đầu
+    
+    // Đang dừng -> chạy lại từ đầu
     startTimer();
+    // start -> true -> di chuyển đc 
+    isPlaying = true;
     btnStartStop.textContent = "Stop";
   }
 });
 
 // lay du lieu tu local
 let history = JSON.parse(localStorage.getItem("history")) || [];
-console.log(history);
-// in no ra html
-console.log(historyEl);
 
+// in no ra html
 const templateHistory = (element) => {
   return `
       <li class="number">
@@ -312,8 +323,15 @@ const addToHistory = (lisEl, item) => {
 }
 
 // dung vong lap de in
-const reLoad = history.forEach(element => {
-  addToHistory(historyEl, element)
-});
+function renderHistory() {
+  // xóa hiển thị, load lại và hiển thị tất cảcả
+  let history = JSON.parse(localStorage.getItem("history")) || [];
+  historyEl.innerHTML = ""; 
+
+  //  lặp qua các phần tử và in ra
+  history.forEach(element => {
+    addToHistory(historyEl, element);
+  });
+}
 
 
