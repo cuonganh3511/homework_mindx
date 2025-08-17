@@ -201,7 +201,6 @@ function checkWin() {
       stopTimer();
 
     }, 300)
-    return isWon;
   }
 }
 
@@ -249,7 +248,8 @@ shuffleBoard();
 
 
 function stopTimer() {
-  // false -> kh di chuyển
+  if (true) {
+    // false -> kh di chuyển
     isPlaying = false;
     count++;
     // btn -> start
@@ -257,7 +257,7 @@ function stopTimer() {
     clearInterval(timerInterval);
     timerInterval = null;
 
-  if (checkWin()) {
+
     //Lấy dữ liệu cũ từ localStorage
     let history = JSON.parse(localStorage.getItem("history")) || [];
 
@@ -270,6 +270,7 @@ function stopTimer() {
       date: new Date().toLocaleString()
     });
 
+
     //Lưu lại toàn bộ danh sách vào localStorage
     localStorage.setItem("history", JSON.stringify(history));
     renderHistory();
@@ -278,7 +279,6 @@ function stopTimer() {
   }
 }
 
-// add event start - stop
 btnStartStop.addEventListener("click", () => {
   if (timerInterval) {
     // Đang chạy -> dừng
